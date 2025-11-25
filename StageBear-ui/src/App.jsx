@@ -1,9 +1,13 @@
-import { useEffect, useState } from 'react'
+import Home from './pages/Home'
+import Details from './pages/Details'
+import ShakesNav from './components/ShakesNav'
 import './css/App.css'
-
+import { Router,Routes,Route } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 function App() {
-  //Define a state variable
+
+    //Define a state variable
   const [shows, setShows] = useState([])
 
   //get API Url from env.variables
@@ -25,26 +29,11 @@ function App() {
 
   return (
     <>
-      <h1>StageBear</h1>
-
-      {
-        shows.length > 0 && (
-          shows.map(show => (
-            <div key={show.ShowID}>
-              <h2>{show.Title}</h2>
-              
-              {show.Image?.trim().startsWith("http") ? (
-                <img src={show.Image} className="img-fluid img-thumbnail" />
-                    ) : (
-                      <img src="/ShakesPlaceholder.png" />
-                    )}
-              
-              <button>Find Tickets!</button>
-              <br/>
-            </div>
-          ))
-        )
-      }
+    <ShakesNav/>
+      <Routes>
+        <Route path="/" element={<Home shows={shows}/>}/>
+        <Route path='/details/:id' element={<Details shows={shows}/>}/>
+      </Routes>
     </>
   )
 }
