@@ -197,12 +197,15 @@ body {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+    color: #3d0020ff;
+
 }
 .card-category {
   font-family: "Figtree", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+    color: #3d0020ff;
 }
 
 .details-btn {
@@ -321,6 +324,23 @@ body {
   font-family: "Love Ya Like A Sister", cursive !important;
   color: #ebd1ff;
 }
+
+.venue-btn {
+  background-color: #d990b6 !important;
+  border: none !important;
+  color: #650031 !important;
+  border-radius: 15px;
+  padding:7px;
+  box-shadow: 
+    2px 2px 4px rgba(0,0,0,0.7),
+    0 0 10px #d70170,
+    0 0 20px #98aeff;;
+}
+.venue-btn:hover {
+  background-color: #e49ac0 !important;
+}
+
+
 
 .details-right {
   padding: 10px;
