@@ -555,5 +555,30 @@ body {
 }
 
 /* CAN'T WAIT */
+.cantWait-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
+.cantWait-container h1, h2 {
+  font-family: "Love Ya Like A Sister", cursive;
+  color:#ffd6ddff;
+  text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),   
+        0 0 10px #ffb1c7,                     
+        0 0 20px #98aeff;
+}
+.cantWait-container h3 {
+  font-family: "Love Ya Like A Sister", cursive;
+  color:#ffd6ddff;
+}
+
+.cantWait-container p {
+  font-family: "Figtree", sans-serif;
+  color:#ffd6ddff;
+  padding-top: 5px;
+}
 
