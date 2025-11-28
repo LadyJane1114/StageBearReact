@@ -1,20 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Love+Ya+Like+A+Sister&display=swap");
 
 
-/*.love-ya-like-a-sister-regular {
-    font-family: "Love Ya Like A Sister", cursive;
-    font-weight: 400;
-    font-style: normal;
-}*/
-
-/*.figtree-<uniquifier > {
-    font-family: "Figtree", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-}*/
-
-
 
 body {
   margin: 0;
@@ -61,6 +47,12 @@ body {
 
 .navbar .nav-link {
   color:#ffeef1 !important;
+}
+.nav-search {
+  font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .SearchButton {
@@ -116,7 +108,7 @@ body {
 
 .hero-overlay h1 {
   font-size: 4rem;
-  position: relative; /* stack above overlay */
+  position: relative;
   color: white;
   font-family: "Love Ya Like A Sister", cursive;
   font-weight: 400;
@@ -127,7 +119,7 @@ body {
         0 0 10px #d70170,
         0 0 20px #98aeff;
   z-index: 1;
-  top: 50%; /* vertically center text */
+  top: 50%;
   transform: translateY(-50%);
   width: 100%;
 }
@@ -152,7 +144,6 @@ body {
   margin: 0;
 }
 
-
 .category-section h2 {
   font-family: "Love Ya Like A Sister", cursive;
   color:#ffd6ddff;
@@ -172,6 +163,9 @@ body {
 .category-card {
   min-width: 200px;
   flex: 0 0 auto;
+}
+.h-100 {
+  background-color: #bdcbff
 }
 .category-card-img {
   width: 100%;
@@ -200,7 +194,36 @@ body {
     background-color: #e49ac0 !important;
 }
 
+.card-title {
+  font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+.card-category {
+  font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
 
+.details-btn {
+  background-color: #d990b6 !important;
+  border: none !important;
+  color: #650031 !important;
+  border-radius: 15px;
+  padding:7px;
+  box-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),   
+        0 0 10px #ffb1c7,                     
+        0 0 20px #98aeff;
+  font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.details-btn:hover {
+  background-color: #e49ac0 !important;
+}
 
 
 /* footer */
@@ -235,3 +258,7 @@ body {
   text-decoration: none;
   color:#ebd1ff;
 }
+
+
+
+/* Details Page */

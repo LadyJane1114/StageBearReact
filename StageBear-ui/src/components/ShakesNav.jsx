@@ -17,7 +17,7 @@ const ShakesNav = () => {
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/">Home</Nav.Link>
 
-              <NavDropdown title="Theatre, Films, and Spoken Word" id="dropdown-1">
+              <NavDropdown title="Theatre, Films, and Spoken Word">
                 <NavDropdown.Item href="#action4">Plays</NavDropdown.Item>
                 <NavDropdown.Item href="#action5">Puppetry</NavDropdown.Item>
                 <NavDropdown.Item href="#action5">Films</NavDropdown.Item>
@@ -25,7 +25,7 @@ const ShakesNav = () => {
                 <NavDropdown.Item href="#action3">Spoken Word</NavDropdown.Item>
               </NavDropdown>
 
-              <NavDropdown title="Music and Fine Arts" id="dropdown-2">
+              <NavDropdown title="Music and Fine Arts">
                 <NavDropdown.Item href="#action3">Musical Theatre</NavDropdown.Item>
                 <NavDropdown.Item href="#action3">Concerts</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">Dance</NavDropdown.Item>
@@ -53,7 +53,7 @@ const ShakesNav = () => {
               <Form.Control
                 type="search"
                 placeholder="Search"
-                className="me-2"
+                className="nav-search me-2"
                 aria-label="Search"
               />
               <Button className='SearchButton'>Search</Button>

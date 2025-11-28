@@ -42,3 +42,16 @@ const inspoColors = {
     powderPurple:"#d6c8e9",
     paleBlue:"#c3c9e9"
 }
+
+/*.love-ya-like-a-sister-regular {
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+    font-style: normal;
+}*/
+
+/*.figtree-<uniquifier > {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}*/

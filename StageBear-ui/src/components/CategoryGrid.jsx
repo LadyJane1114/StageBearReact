@@ -30,13 +30,13 @@ const CategoryGrid = ({ title, shows = [] }) => {
               </Link>
 
               <Card.Body>
-                <Card.Title>{show.Title}</Card.Title>
-                <Card.Text>{show.Category}</Card.Text>
+                <Card.Title className='card-title'>{show.Title}</Card.Title>
+                <Card.Text className='card-category'>{show.CategoryTitle}</Card.Text>
               </Card.Body>
 
-              <Card.Footer>
+              <Card.Footer className='d-flex justify-content-end'>
                 <Link to={`/details/${show.ShowID}`}>
-                  <button className="details-btn">More Details</button>
+                  <button className="details-btn">Find out more!</button>
                 </Link>
               </Card.Footer>
             </Card>
