@@ -1,9 +1,10 @@
-import { useLocation,Link } from "react-router-dom";
+import { useLocation,Link, useNavigate  } from "react-router-dom";
 import { useState } from "react";
 
 const Purchase = ({shows}) => {
-const location = useLocation();
+  const location = useLocation();
   const showID = location.state?.showID;
+  const navigate = useNavigate();
 
   const show = shows.find((s) => s.ShowID === Number(showID));
 
@@ -88,7 +89,7 @@ const location = useLocation();
     const result = await response.json();
     console.log(result);
 
-    alert("Purchase successful!");
+    navigate("/cant-wait-to-see-you");
   };
 
   if (!showID) return <p>Error: No show selected.</p>;

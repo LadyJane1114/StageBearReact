@@ -9,6 +9,7 @@ import AboutShakes from './pages/AboutShakes'
 import AboutUs from './pages/AboutUs'
 import GetHelp from './pages/GetHelp'
 import Purchase from './pages/Purchase'
+import CantWait from './pages/CantWait'
 
 
 
@@ -41,6 +42,7 @@ function App() {
         <Route path="/" element={<Home shows={shows}/>}/>
         <Route path='/details/:id' element={<Details shows={shows}/>}/>
         <Route path="/purchase" element={<Purchase shows={shows} />} />
+        <Route path="/cant-wait-to-see-you" element={<CantWait />} />
 
         {/* footer links */}
         <Route path='/aboutUs' element={<AboutUs/>}/>
