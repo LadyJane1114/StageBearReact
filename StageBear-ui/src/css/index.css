@@ -437,3 +437,120 @@ body {
 .btn-home:hover {
     background-color: #e49ac0 !important;
 }
+
+
+/* Purchase Page */
+
+.purchase-page {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f7f2f8;
+  border-radius: 20px;
+  font-family: "Figtree", sans-serif;
+  box-shadow:
+    3px 3px 10px rgba(0,0,0,0.2),
+    0 0 20px #d990b6aa;
+}
+
+.purchase-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #650031;
+  font-weight: 700;
+  font-family: "Figtree", sans-serif;
+}
+
+.purchase-page form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 25px;
+  font-family: "Figtree", sans-serif;
+}
+
+.purchase-page form h2,
+.purchase-page form button,
+.purchase-page form .full {
+  grid-column: span 2;
+}
+
+.purchase-page label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #650031;
+}
+
+.purchase-page input,
+.purchase-page select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 2px solid #d990b6;
+  background: #fff;
+  font-size: 1rem;
+  transition: 0.2s;
+  font-family: "Figtree", sans-serif;
+}
+
+.purchase-page input:focus,
+.purchase-page select:focus {
+  outline: none;
+  border-color: #b83179;
+  box-shadow: 0 0 8px #d990b6;
+}
+
+.purchase-page h2 {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: #b83179;
+  border-bottom: 2px solid #d990b6;
+  padding-bottom: 5px;
+}
+
+.purchase-page button[type="submit"] {
+  margin-top: 10px;
+  padding: 12px;
+  background: #d990b6;
+  color: #650031;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow:
+    2px 2px 5px rgba(0,0,0,0.3),
+    0 0 10px #d990b6,
+    0 0 20px #98aeff;
+  transition: 0.2s;
+  font-family: "Figtree", sans-serif;
+}
+
+.purchase-page button[type="submit"]:hover {
+  background: #e9a2c5;
+}
+.back-2-details-btn {
+  background-color: #d990b6 !important;
+  border: none !important;
+  color: #650031 !important;
+  border-radius: 15px;
+  padding:7px;
+  box-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),   
+        0 0 5px #ffb1c7,                     
+        0 0 10px #98aeff;
+  font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+    font-style: normal;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.back-2-details-btn:hover{
+  background-color: #e49ac0 !important;
+}
+
+.error-input {
+  border: 2px solid #b2001f !important; 
+  background-color: #ffbdb9 !important; 
+  
+}

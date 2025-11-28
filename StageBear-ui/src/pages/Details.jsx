@@ -86,7 +86,9 @@ const Details = ({shows}) => {
                 hour: "numeric",
                 minute: "2-digit",
               })}
-              <Link to="/purchase"><button className="purchase-tkts">Find a Seat!</button></Link>
+              <Link to="/purchase" state={{ showID: p.ShowID }} >
+                <button className="purchase-tkts">Find a Seat!</button>
+              </Link>
             </li>
           ))}
         </ul>

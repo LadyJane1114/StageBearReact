@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import AboutShakes from './pages/AboutShakes'
 import AboutUs from './pages/AboutUs'
 import GetHelp from './pages/GetHelp'
+import Purchase from './pages/Purchase'
 
 
 
@@ -39,6 +40,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home shows={shows}/>}/>
         <Route path='/details/:id' element={<Details shows={shows}/>}/>
+        <Route path="/purchase" element={<Purchase shows={shows} />} />
 
         {/* footer links */}
         <Route path='/aboutUs' element={<AboutUs/>}/>
