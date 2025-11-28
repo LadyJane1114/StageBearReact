@@ -1,35 +1,53 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import HeroEvents from '../components/HeroEvents'
+import CategoryGrid from '../components/CategoryGrid'
 
-
+const CATEGORY_GROUPS = {
+  "Theatre, Films, and Spoken Word": [
+    "Play",
+    "Puppetry",
+    "Film",
+    "Comedy",
+    "Spoken Word"
+  ],
+  "Music and Fine Arts": [
+    "Musicals",
+    "Concert",
+    "Dance",
+    "Fine Art"
+  ],
+  "Special Acts and Family Events": [
+    "Circus",
+    "Ice Show",
+    "Magic/Illusion",
+    "Family",
+    "Specialty Act",
+    "Convention",
+    "Rodeo"
+  ]
+};
 
 const Home = ({shows}) => {
-
 
 
   return (
     <>
     <HeroEvents shows={shows}/>
-{/* 
-      {
-        shows.length > 0 && (
-          shows.map(show => (
-            <div key={show.ShowID}>
-              <h2>{show.Title}</h2>
-              
-              {show.Image?.trim().startsWith("http") ? (
-                <img src={show.Image} className="img-fluid img-thumbnail" />
-                    ) : (
-                      <img src="/ShakesPlaceholder.png" />
-                    )}
-              <button><Link to={`/details/${show.ShowID}`}>More Details</Link></button>
-              <button>Find Tickets!</button>
-              <br/>
-            </div>
-          ))
-        )
-      } */}
+
+    {Object.entries(CATEGORY_GROUPS).map(([groupTitle, allowedCategories]) => {
+        const filteredShows = shows.filter(show =>
+          allowedCategories.includes(show.CategoryTitle)
+        );
+
+        return (
+          <CategoryGrid
+            key={groupTitle}
+            title={groupTitle}
+            shows={filteredShows}
+          />
+        );
+      })}
     </>
   )
 }
