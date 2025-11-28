@@ -270,6 +270,7 @@ body {
   padding: 20px;
 }
 
+/* LEFT SIDE OF DETAILS PAGE */
 .details-left {
   position: relative;
 }
@@ -333,17 +334,44 @@ body {
   padding:7px;
   box-shadow: 
     2px 2px 4px rgba(0,0,0,0.7),
-    0 0 10px #d70170,
-    0 0 20px #98aeff;;
+    0 0 5px #d70170,
+    0 0 10px #98aeff;
 }
 .venue-btn:hover {
   background-color: #e49ac0 !important;
 }
 
+.venue-modal-header {
+  background-color: #6d84d0;
+  color:#1a1024ff;
+  font-family: "Love Ya Like A Sister", cursive !important;
+}
+.venue-modal-body {
+  background-color: #c3c9e9;
+  color:#1a1024ff;
+  font-family: "Figtree", sans-serif;
+}
+.venue-modal-footer {
+  background-color: #c3c9e9;
+  color:#1a1024ff;
+}
+.venue-modal-footer .close-modal {
+  background-color: #d990b6 !important;
+  border: none !important;
+  color: #650031 !important;
+  border-radius: 15px;
+  padding:7px;
+  box-shadow: 1px 1px 2px #650031;
+}
+.venue-modal-footer .close-modal:hover{
+  background-color: #e49ac0 !important;
+}
 
 
+/* RIGHT SIDE OF DETAILS PAGE */
 .details-right {
   padding: 10px;
+  position: relative;
 }
 
 .schedule-header {
@@ -387,10 +415,9 @@ body {
 }
 
 .btn-home-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-top: 300px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 .btn-home {
@@ -406,7 +433,6 @@ body {
   font-family: "Love Ya Like A Sister", cursive;
     font-weight: 400;
     font-style: normal;
-  margin: 20px;
 }
 .btn-home:hover {
     background-color: #e49ac0 !important;

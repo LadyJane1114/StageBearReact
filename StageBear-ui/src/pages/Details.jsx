@@ -2,6 +2,7 @@
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 const Details = ({shows}) => {
@@ -42,7 +43,7 @@ const Details = ({shows}) => {
         </div>
 
         <div className='show-description'>
-            <h2>About this Show</h2>
+            <h2>About This Show</h2>
               <p>{show.Description}</p>
             <br/>
             <h3>Venue</h3>
@@ -50,11 +51,11 @@ const Details = ({shows}) => {
 
               <Modal show={modalVisible} onHide={handleClose}>
 
-                  <Modal.Header closeButton>
+                  <Modal.Header className="venue-modal-header" closeButton>
                     <Modal.Title>{show.VenueName}</Modal.Title>
                   </Modal.Header>
 
-                  <Modal.Body>
+                  <Modal.Body className="venue-modal-body">
                     <p>Address: {show.StreetAddress}, {show.City} {show.Region}, {show.Country}</p>
                     <p>Phone: +{show.VenuePhone}</p>
                     <br/>
@@ -62,10 +63,10 @@ const Details = ({shows}) => {
                     <p>{show.VenueNotes}</p>
                   </Modal.Body>
 
-                  <Modal.Footer>
-                    <button variant="secondary" onClick={handleClose}>
+                  <Modal.Footer className="venue-modal-footer">
+                    <Button className='close-modal' onClick={handleClose}>
                       Close
-                    </button>
+                    </Button>
                   </Modal.Footer>
             </Modal>
         </div>
@@ -78,6 +79,7 @@ const Details = ({shows}) => {
           {performances.map((p) => (
             <li key={p.ShowID} className="schedule-item">
               {new Date(p.Scheduled).toLocaleString("en-US", {
+                timeZone: "Europe/London",
                 weekday: "long",
                 month: "long",
                 day: "numeric",
