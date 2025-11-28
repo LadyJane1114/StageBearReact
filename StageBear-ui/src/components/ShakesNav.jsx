@@ -1,6 +1,6 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { Nav, Navbar, Container, NavDropdown, Form, Button } from "react-bootstrap"
+import ShakesLogo from '../assets/ShakesLogo.png'
 
 const ShakesNav = () => {
   return (
@@ -8,7 +8,7 @@ const ShakesNav = () => {
       <Navbar className="ShakesNav" expand="lg">
         <Container fluid className='nav-container'>
           <Navbar.Brand as={Link} to="/">
-            <img className="shakesLogoNav" src="./src/assets/ShakesLogo.png" alt="ShakesLogo" />
+            <img className="shakesLogoNav" src={ShakesLogo} alt="ShakesLogo" />
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="main-navbar-nav" className="custom-toggle">Menu</Navbar.Toggle>
@@ -17,7 +17,7 @@ const ShakesNav = () => {
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/">Home</Nav.Link>
 
-              <NavDropdown title="Theatre, Films, and Spoken Word">
+              <NavDropdown title="Theatre, Films, and Spoken Word" id="dropdown-1">
                 <NavDropdown.Item href="#action4">Plays</NavDropdown.Item>
                 <NavDropdown.Item href="#action5">Puppetry</NavDropdown.Item>
                 <NavDropdown.Item href="#action5">Films</NavDropdown.Item>
@@ -25,7 +25,7 @@ const ShakesNav = () => {
                 <NavDropdown.Item href="#action3">Spoken Word</NavDropdown.Item>
               </NavDropdown>
 
-              <NavDropdown title="Music and Fine Arts">
+              <NavDropdown title="Music and Fine Arts" id="dropdown-2">
                 <NavDropdown.Item href="#action3">Musical Theatre</NavDropdown.Item>
                 <NavDropdown.Item href="#action3">Concerts</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">Dance</NavDropdown.Item>
@@ -53,7 +53,7 @@ const ShakesNav = () => {
               <Form.Control
                 type="search"
                 placeholder="Search"
-                className="nav-search me-2"
+                className="me-2"
                 aria-label="Search"
               />
               <Button className='SearchButton'>Search</Button>
