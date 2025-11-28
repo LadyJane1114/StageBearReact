@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import HeroEvents from '../components/HeroEvents'
 
 
 
@@ -9,7 +10,8 @@ const Home = ({shows}) => {
 
   return (
     <>
-
+    <HeroEvents shows={shows}/>
+{/* 
       {
         shows.length > 0 && (
           shows.map(show => (
@@ -27,7 +29,7 @@ const Home = ({shows}) => {
             </div>
           ))
         )
-      }
+      } */}
     </>
   )
 }

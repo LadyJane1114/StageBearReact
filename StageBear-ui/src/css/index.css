@@ -1,26 +1,20 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Love+Ya+Like+A+Sister&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/*.love-ya-like-a-sister-regular {
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+    font-style: normal;
+}*/
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+/*.figtree-<uniquifier > {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}*/
+
+
 
 body {
   margin: 0;
@@ -28,41 +22,99 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: rgb(#ffd6ddff) !important;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Nav */
+.ShakesNav {
+  font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+    background-color: #d70170 !important;
+    justify-content: space-between !important;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.shakesLogoNav {
+  max-height: 90px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.custom-toggle{
+  color:#650031 !important;
+  border-radius: 15px !important;
+  background-color: #d990b6;
+  box-shadow: 1px 1px 2px #650031;
+}
+
+.custom-toggle:hover{
+  color:#650031 !important;
+  border-radius: 15px !important;
+  background-color: #ffb1c7;
+}
+
+.navbar .nav-link {
+  color:#ffeef1 !important;
+}
+
+.SearchButton {
+  background-color: #6d84d0 !important;
+  border: none !important;
+  color: #00287d !important;
+  border-radius: 15px;
+}
+
+.SearchButton:hover {
+  background-color: #d4b3ff !important;
+  color: #000 !important;
+}
+
+
+
+/* Hero */
+.hero-container {
+  position: relative;
+  width: 100%;
+  max-height: 400px; /* adjust as needed */
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-item {
+  flex: 1; /* each image takes equal width */
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crops images to fill the container */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+    font-style: normal;
+  text-align: center;
+  width: 100%;
+  pointer-events: none;
+  text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),   
+        0 0 10px #d70170,                     
+        0 0 20px #98aeff;
+}
+
+.hero-overlay h1 {
+  font-size: 4rem; /* adjust as needed */
+
 }

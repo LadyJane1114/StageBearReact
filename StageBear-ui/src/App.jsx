@@ -1,9 +1,15 @@
+import { Routes,Route } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+
 import Home from './pages/Home'
 import Details from './pages/Details'
 import ShakesNav from './components/ShakesNav'
-import './css/App.css'
-import { Router,Routes,Route } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import Footer from './components/Footer'
+import AboutShakes from './pages/AboutShakes'
+import AboutUs from './pages/AboutUs'
+import GetHelp from './pages/GetHelp'
+
+
 
 function App() {
 
@@ -33,7 +39,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Home shows={shows}/>}/>
         <Route path='/details/:id' element={<Details shows={shows}/>}/>
+
+        {/* footer links */}
+        <Route path='/aboutUs' element={<AboutUs/>}/>
+        <Route path='/faq' element={<GetHelp/>}/>
+        <Route path='/aboutShakes' element={<AboutShakes/>}/>
       </Routes>
+
+      <Footer/>
+
     </>
   )
 }
