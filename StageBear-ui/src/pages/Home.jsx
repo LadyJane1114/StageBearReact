@@ -12,7 +12,7 @@ const CATEGORY_GROUPS = {
     "Spoken Word"
   ],
   "Music and Fine Arts": [
-    "Musicals",
+    "Musical",
     "Concert",
     "Dance",
     "Fine Art"
