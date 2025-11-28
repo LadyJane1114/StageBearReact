@@ -6,7 +6,7 @@ const ShakesNav = () => {
   return (
     <>
       <Navbar className="ShakesNav" expand="lg">
-        <Container>
+        <Container fluid className='nav-container'>
           <Navbar.Brand as={Link} to="/">
             <img className="shakesLogoNav" src="./src/assets/ShakesLogo.png" alt="ShakesLogo" />
           </Navbar.Brand>

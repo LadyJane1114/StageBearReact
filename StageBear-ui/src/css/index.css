@@ -22,7 +22,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: rgb(#ffd6ddff) !important;
+  background-color: #1a1024ff !important;
   
 }
 
@@ -32,8 +32,13 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: large;
-    background-color: #d70170 !important;
+    background-color: #6d84d0 !important;
     justify-content: space-between !important;
+}
+.nav-container {
+  width: 100% !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 
 .shakesLogoNav {
@@ -45,6 +50,7 @@ body {
   border-radius: 15px !important;
   background-color: #d990b6;
   box-shadow: 1px 1px 2px #650031;
+  font-size: xx-large;
 }
 
 .custom-toggle:hover{
@@ -58,15 +64,16 @@ body {
 }
 
 .SearchButton {
-  background-color: #6d84d0 !important;
+  background-color: #d990b6 !important;
   border: none !important;
-  color: #00287d !important;
+  color: #650031 !important;
   border-radius: 15px;
+  font-size: larger;
+  box-shadow: 1px 1px 2px #650031;
 }
 
 .SearchButton:hover {
-  background-color: #d4b3ff !important;
-  color: #000 !important;
+  background-color: #e49ac0 !important;
 }
 
 
@@ -75,7 +82,7 @@ body {
 .hero-container {
   position: relative;
   width: 100%;
-  max-height: 400px; /* adjust as needed */
+  max-height: 400px;
   overflow: hidden;
 }
 
@@ -86,7 +93,7 @@ body {
 }
 
 .hero-item {
-  flex: 1; /* each image takes equal width */
+  flex: 1;
   overflow: hidden;
   position: relative;
 }
@@ -94,31 +101,37 @@ body {
 .hero-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* crops images to fill the container */
+  object-fit: cover;
+  
 }
 
 .hero-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-family: "Love Ya Like A Sister", cursive;
-    font-weight: 400;
-    font-style: normal;
-  text-align: center;
+  top: 0;
+  left: 0;
   width: 100%;
-  pointer-events: none;
-  text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.7),   
-        0 0 10px #d70170,                     
-        0 0 20px #98aeff;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hero-overlay h1 {
-  font-size: 4rem; /* adjust as needed */
-
+  font-size: 4rem;
+  position: relative; /* stack above overlay */
+  color: white;
+  font-family: "Love Ya Like A Sister", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),
+        0 0 10px #d70170,
+        0 0 20px #98aeff;
+  z-index: 1;
+  top: 50%; /* vertically center text */
+  transform: translateY(-50%);
+  width: 100%;
 }
+
 
 
 /* category grids */
@@ -127,10 +140,26 @@ body {
   background-color: rgb(#ffd6ddff) !important;
 }
 
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem 1rem 1rem;
+  padding: 0; 
+}
+
+.category-header h2 {
+  margin: 0;
+}
+
+
 .category-section h2 {
-  margin-bottom: 1rem;
   font-family: "Love Ya Like A Sister", cursive;
-  margin-left: 1rem;
+  color:#ffd6ddff;
+  text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),   
+        0 0 10px #ffb1c7,                     
+        0 0 20px #98aeff;
 }
 
 .cards-row {
@@ -150,6 +179,25 @@ body {
   object-fit: cover;   
   object-position: center;
   border-radius: 6px; 
+}
+
+.seeAllBtn {
+  background-color: #d990b6 !important;
+  border: none !important;
+  color: #650031 !important;
+  border-radius: 15px;
+  font-size: larger;
+  padding:7px;
+  box-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),   
+        0 0 10px #ffb1c7,                     
+        0 0 20px #98aeff;
+  font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.seeAllBtn:hover {
+    background-color: #e49ac0 !important;
 }
 
 

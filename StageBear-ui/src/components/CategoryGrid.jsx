@@ -12,8 +12,10 @@ const CategoryGrid = ({ title, shows = [] }) => {
 
   return (
     <div className="category-section">
-      <h2>{title}</h2>
-
+      <div className='category-header'>
+        <h2>{title} </h2>
+        <button className="seeAllBtn">See all...</button>
+      </div>
       <Row>
         {showsToDisplay.map(show => (
           <Col key={show.ShowID} sm={12} md={6} lg={4} xl={3} className="mb-4">
