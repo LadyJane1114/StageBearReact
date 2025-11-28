@@ -507,6 +507,8 @@ body {
   color: #b83179;
   border-bottom: 2px solid #d990b6;
   padding-bottom: 5px;
+  font-family: "Figtree", sans-serif;
+  text-shadow: none !important;
 }
 
 .purchase-page button[type="submit"] {
