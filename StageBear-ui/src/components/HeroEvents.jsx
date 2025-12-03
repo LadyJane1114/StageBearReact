@@ -1,7 +1,7 @@
 import React from 'react'
 import App from '../App'
 
-const HeroEvents = ({ shows = [] }) => {
+const HeroEvents = ({ shows = [], pageTitle = "Get the best seats to all your favourite shows!"  }) => {
   const upcomingShows = shows
     .sort((a,b) => new Date(a.Scheduled) - new Date(b.Scheduled))
     .filter((show,index,arr) => arr.findIndex(s=> s.Title === show.Title)=== index)
@@ -22,7 +22,7 @@ const HeroEvents = ({ shows = [] }) => {
             </div>
           ))}
           <div className="hero-overlay">
-            <h1>Get the best seats to all your favourite shows!</h1>
+            <h1>{pageTitle}</h1>
           </div>
         </div>
     </div>

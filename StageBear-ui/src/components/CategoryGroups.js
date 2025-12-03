@@ -1,0 +1,25 @@
+export const CATEGORY_GROUPS = {
+  "Theatre, Films, and Spoken Word": [
+    { label: "Plays", value: "Play" },
+    { label: "Puppetry", value: "Puppetry" },
+    { label: "Films", value: "Film" },
+    { label: "Comedy", value: "Comedy" },
+    { label: "Spoken Word", value: "Spoken Word" }
+  ],
+  "Music and Fine Arts": [
+    { label: "Musical Theatre", value: "Musical" },
+    { label: "Concerts", value: "Concert" },
+    { label: "Dance", value: "Dance" },
+    { label: "Fine Art", value: "Fine Art" }
+  ],
+  "Special Acts and Family Events": [
+    { label: "Circus", value: "Circus" },
+    { label: "Ice Shows", value: "Ice Show" },
+    { label: "Magic & Illusions", value: "Magic/Illusion" },
+    { label: "Family Events", value: "Family" },
+    { label: "Specialty Acts", value: "Specialty Act" },
+    { label: "Conventions", value: "Convention" },
+    { label: "Rodeo", value: "Rodeo" }
+  ]
+};
+

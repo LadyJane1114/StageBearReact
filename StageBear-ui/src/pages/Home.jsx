@@ -1,32 +1,7 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import HeroEvents from '../components/HeroEvents'
 import CategoryGrid from '../components/CategoryGrid'
-
-const CATEGORY_GROUPS = {
-  "Theatre, Films, and Spoken Word": [
-    "Play",
-    "Puppetry",
-    "Film",
-    "Comedy",
-    "Spoken Word"
-  ],
-  "Music and Fine Arts": [
-    "Musical",
-    "Concert",
-    "Dance",
-    "Fine Art"
-  ],
-  "Special Acts and Family Events": [
-    "Circus",
-    "Ice Show",
-    "Magic/Illusion",
-    "Family",
-    "Specialty Act",
-    "Convention",
-    "Rodeo"
-  ]
-};
+import {CATEGORY_GROUPS} from '../components/CategoryGroups'
 
 const Home = ({shows}) => {
 

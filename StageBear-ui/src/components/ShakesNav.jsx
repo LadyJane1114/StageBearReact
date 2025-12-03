@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Nav, Navbar, Container, NavDropdown, Form, Button } from "react-bootstrap"
 import ShakesLogo from '../assets/ShakesLogo.png'
+import {CATEGORY_GROUPS} from '../components/CategoryGroups'
 
 const ShakesNav = () => {
   return (
@@ -18,34 +19,39 @@ const ShakesNav = () => {
               <Nav.Link as={Link} to="/">Home</Nav.Link>
 
               <NavDropdown title="Theatre, Films, and Spoken Word" id="dropdown-1">
-                <NavDropdown.Item href="#action4">Plays</NavDropdown.Item>
-                <NavDropdown.Item href="#action5">Puppetry</NavDropdown.Item>
-                <NavDropdown.Item href="#action5">Films</NavDropdown.Item>
-                <NavDropdown.Item href="#action3">Comedy</NavDropdown.Item>
-                <NavDropdown.Item href="#action3">Spoken Word</NavDropdown.Item>
+                {CATEGORY_GROUPS["Theatre, Films, and Spoken Word"].map(cat => (
+                  <NavDropdown.Item 
+                    key={cat.value} 
+                    as={Link} 
+                    to={`/category/${encodeURIComponent(cat.value)}`}>
+                    {cat.label}</NavDropdown.Item>
+                ))}
               </NavDropdown>
 
               <NavDropdown title="Music and Fine Arts" id="dropdown-2">
-                <NavDropdown.Item href="#action3">Musical Theatre</NavDropdown.Item>
-                <NavDropdown.Item href="#action3">Concerts</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Dance</NavDropdown.Item>
-                <NavDropdown.Item href="#action5">Fine Art</NavDropdown.Item>
+                {CATEGORY_GROUPS["Music and Fine Arts"].map(cat => (
+                  <NavDropdown.Item 
+                    key={cat.value} 
+                    as={Link} 
+                    to={`/category/${encodeURIComponent(cat.value)}`}>
+                    {cat.label}</NavDropdown.Item>
+                ))}
               </NavDropdown>
 
               <NavDropdown title="Special Acts and Family Events" id="dropdown-3">
-                <NavDropdown.Item href="#action3">Circus</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Ice Shows</NavDropdown.Item>
-                <NavDropdown.Item href="#action5">Magic/Illusions</NavDropdown.Item>
-                <NavDropdown.Item href="#action3">Family Events</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Specialty Acts</NavDropdown.Item>
-                <NavDropdown.Item href="#action3">Conventions</NavDropdown.Item>
-                <NavDropdown.Item href="#action3">Rodeo</NavDropdown.Item>
+                {CATEGORY_GROUPS["Special Acts and Family Events"].map(cat => (
+                  <NavDropdown.Item 
+                    key={cat.value} 
+                    as={Link} 
+                    to={`/category/${encodeURIComponent(cat.value)}`}>
+                    {cat.label}</NavDropdown.Item>
+                ))}
               </NavDropdown>
 
               <NavDropdown title="Countries" id="dropdown-4">
-                <NavDropdown.Item href="#action3">Canada</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">United States</NavDropdown.Item>
-                <NavDropdown.Item href="#action5">United Kingdom</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to ="/Canada">Canada</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to ="/United%States">United States</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to ="/United%20Kingdom">United Kingdom</NavDropdown.Item>
               </NavDropdown>
             </Nav>
 

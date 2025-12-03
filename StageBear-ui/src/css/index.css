@@ -584,3 +584,27 @@ body {
   padding-top: 5px;
 }
 
+
+/* CATEGORY PAGE */
+.category-page{
+  padding: 7px;
+}
+.category-page h1 {
+  font-family: "Love Ya Like A Sister", cursive !important;
+  color:#ffd6ddff !important;
+  text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),   
+        0 0 10px #ffb1c7,                     
+        0 0 20px #98aeff;
+}
+
+.cat-thumbnail {
+  max-width: 20%;
+}
+.category-page p {
+  font-family: "Figtree", sans-serif;
+  color:#ffd6ddff;
+}
+.category-list-container{
+  padding: 10px;
+}
