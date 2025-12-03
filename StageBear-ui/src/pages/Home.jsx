@@ -10,10 +10,11 @@ const Home = ({shows}) => {
     <>
     <HeroEvents shows={shows}/>
 
-    {Object.entries(CATEGORY_GROUPS).map(([groupTitle, allowedCategories]) => {
-        const filteredShows = shows.filter(show =>
-          allowedCategories.includes(show.CategoryTitle)
-        );
+ {Object.entries(CATEGORY_GROUPS).map(([groupTitle, allowedCategories]) => {
+    const allowedValues = allowedCategories.map(c => c.value);
+    const filteredShows = shows.filter(show =>
+      allowedValues.includes(show.CategoryTitle)
+    );
 
         return (
           <CategoryGrid

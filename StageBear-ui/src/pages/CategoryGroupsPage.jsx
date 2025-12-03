@@ -6,33 +6,26 @@ import Row from 'react-bootstrap/Row';
 import HeroEvents from "../components/HeroEvents"
 import {CATEGORY_GROUPS} from '../components/CategoryGroups'
 
+const CategoryGroupsPage = ({shows}) => {
 
-const valueToLabelMap = Object.values(CATEGORY_GROUPS)
-  .flat()
-  .reduce((acc, { value, label }) => {
-    acc[value] = label;
-    return acc;
-  }, {});
-
-const CategoryPage = ({shows}) => {
     const { category } = useParams();
-    
     const decodedCategory = decodeURIComponent(category);
-    
+    const allowedCategories = CATEGORY_GROUPS[decodedCategory]?.map(c => c.value) || [];
+        
     const filtered = shows.filter(
-        (show) => show.CategoryTitle === decodedCategory
-    );
+        show => allowedCategories.includes(show.CategoryTitle)
+        );
     const uniqueShows = [
-        ...new Map(filtered.map(show => [show.Title, show])).values()
+         ...new Map(filtered.map(show => [show.Title, show])).values()
     ];
-
-    const displayLabel = valueToLabelMap[decodedCategory] || decodedCategory;
+    
+    const displayLabel = decodedCategory;
 
   return (
     <>
     <HeroEvents 
         shows={filtered} 
-        pageTitle={displayLabel}
+        pageTitle={decodedCategory}
     />
 
     <div className="category-page">
@@ -51,7 +44,14 @@ const CategoryPage = ({shows}) => {
                         />
                         <Card.Body>
                         <Card.Title className="card-title">{show.Title}</Card.Title>
-                        <Card.Text className="card-info">{show.VenueName}</Card.Text>
+                        <Card.Text className="card-info">
+                            <div>
+                                {show.CategoryTitle}
+                            </div>
+                            <div>
+                                {show.VenueName}
+                            </div>
+                            </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-end">
                         <Link to={`/details/${show.ShowID}`}>
@@ -70,4 +70,4 @@ const CategoryPage = ({shows}) => {
   )
 }
 
-export default CategoryPage
+export default CategoryGroupsPage
