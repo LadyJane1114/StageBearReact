@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+
+
 const CategoryGrid = ({ title, shows = [] }) => {
 
   const uniqueShows = shows.filter(
@@ -14,7 +16,7 @@ const CategoryGrid = ({ title, shows = [] }) => {
     <div className="category-section">
       <div className='category-header'>
         <h2>{title} </h2>
-        <button className="seeAllBtn">See all...</button>
+        <Link to={`/category-group/${encodeURIComponent(title)}`}className="seeAllBtn">See all...</Link>
       </div>
       <Row>
         {showsToDisplay.map(show => (
@@ -31,7 +33,7 @@ const CategoryGrid = ({ title, shows = [] }) => {
 
               <Card.Body>
                 <Card.Title className='card-title'>{show.Title}</Card.Title>
-                <Card.Text className='card-category'>{show.CategoryTitle}</Card.Text>
+                <Card.Text className='card-info'>{show.CategoryTitle}</Card.Text>
               </Card.Body>
 
               <Card.Footer className='d-flex justify-content-end'>

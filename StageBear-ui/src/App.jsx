@@ -11,6 +11,7 @@ import GetHelp from './pages/GetHelp'
 import Purchase from './pages/Purchase'
 import CantWait from './pages/CantWait'
 import CategoryPage from './pages/CategoryPage'
+import CategoryGroupsPage from './pages/CategoryGroupsPage'
 
 
 
@@ -46,6 +47,7 @@ function App() {
         <Route path="/cant-wait-to-see-you" element={<CantWait />} />
 
         <Route path="/category/:category" element={<CategoryPage shows={shows}/>} />
+        <Route path="/category-group/:category" element={<CategoryGroupsPage shows={shows}/>} />
 
         {/* footer links */}
         <Route path='/aboutUs' element={<AboutUs/>}/>
