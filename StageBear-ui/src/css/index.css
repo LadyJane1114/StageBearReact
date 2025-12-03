@@ -599,6 +599,12 @@ body {
         0 0 20px #98aeff;
 }
 
+<<<<<<< HEAD
+=======
+.cat-thumbnail {
+  max-width: 20%;
+}
+>>>>>>> 18224b1a29628a8cc0dd9ff71d7ba4f3825e5dd2
 .category-list-container{
   padding: 10px;
 }
