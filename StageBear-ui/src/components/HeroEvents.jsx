@@ -1,5 +1,3 @@
-import React from 'react'
-import App from '../App'
 
 const HeroEvents = ({ shows = [], pageTitle = "Get the best seats to all your favourite shows!"  }) => {
   const upcomingShows = shows

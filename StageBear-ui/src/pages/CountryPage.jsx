@@ -3,7 +3,8 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-import HeroEvents from "../components/HeroEvents"
+import LocationHero from "../components/LocationHero";
+import { COUNTRY_IMAGES } from '../components/ReferenceGroups';
 
 const CountryPage = ({shows}) => {
     const {country} = useParams();
@@ -28,9 +29,8 @@ const decodedCountry = safeDecodeURIComponent(country);
 
   return (
     <>
-    <HeroEvents 
-        shows={filtered} 
-        pageTitle={countryName}
+    <LocationHero
+    type="country" name={countryName} images={COUNTRY_IMAGES} pageTitle={`Shows in ${countryName}`}
     />
 
     <div className="category-page">
