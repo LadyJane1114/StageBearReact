@@ -615,6 +615,35 @@ body {
   border-radius: 6px; 
 }
 
+/* About Shakes Page */
+.details-right p {
+  font-family: "Figtree", sans-serif;
+  color:#ffd6ddff;
+  font-size: large;
+}
+.bear-aside {
+  font-size: small !important;
+}
+
+.shakes-poster {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.meet-shakes{
+  font-family: "Love Ya Like A Sister", cursive;
+  color:#ffd6ddff;
+  text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),   
+        0 0 10px #ffb1c7,                     
+        0 0 20px #98aeff;
+  text-align: center;
+  padding: 7px;
+}
+
+
+
 /* MEDIA QUERIES */
 /* DETAILS */
 @media (max-width: 1427px) {
@@ -750,26 +779,46 @@ body {
 
 
 /* HERO */
-/* --- Large desktops (up to 1427px) --- */
 @media (max-width: 1427px) {
   .hero-overlay h1 {
     font-size: 3.5rem;
   }
 }
 
-/* --- Tablets / small desktops (up to 991px) --- */
+
 @media (max-width: 991px) {
   .hero-overlay h1 {
     font-size: 2.5rem;
-    padding: 0 20px; /* prevent text from touching edges */
+    padding: 0 20px;
   }
 }
 
-/* --- Mobile phones (up to 412px) --- */
+
 @media (max-width: 412px) {
   .hero-overlay h1 {
     font-size: 1.8rem;
     padding: 0 10px;
     line-height: 1.2;
+  }
+}
+
+/* About Shakes */
+@media (min-width: 412px) {
+  .shakes-poster {
+    max-width: 380px;
+  }
+}
+
+
+@media (min-width: 991px) {
+  .shakes-poster {
+    max-width: 300px;
+  }
+}
+
+
+@media (min-width: 1427px) {
+  .shakes-poster {
+    max-width: 400px;
   }
 }

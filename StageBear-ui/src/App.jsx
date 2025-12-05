@@ -6,8 +6,6 @@ import Details from './pages/Details'
 import ShakesNav from './components/ShakesNav'
 import Footer from './components/Footer'
 import AboutShakes from './pages/footer/AboutShakes'
-import AboutUs from './pages/footer/AboutUs'
-import GetHelp from './pages/footer/GetHelp'
 import Purchase from './pages/Purchase'
 import CantWait from './pages/CantWait'
 import CategoryPage from './pages/navLinks/CategoryPage'
@@ -60,9 +58,6 @@ function App() {
         <Route path="/:cityName" element={<CityGrid />} />
         <Route path="/city/:city" element={<CityPage shows={shows}/>}/>
 
-        
-        <Route path='/aboutUs' element={<AboutUs/>}/>
-        <Route path='/faq' element={<GetHelp/>}/>
         <Route path='/aboutShakes' element={<AboutShakes/>}/>
       </Routes>
 
