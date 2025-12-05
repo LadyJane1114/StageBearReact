@@ -11,7 +11,7 @@ const Footer = () => {
       <Row>
         <Col sm={8}>
           <div className='copyright'>
-            <h3>&copy; Lady Jane Scott - Nov 2025</h3>
+            <h3>&copy; Lady Jane Scott - Dec 2025</h3>
           </div>
         </Col>
         <Col sm={4}>
