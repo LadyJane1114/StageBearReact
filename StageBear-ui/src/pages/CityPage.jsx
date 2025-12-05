@@ -4,10 +4,10 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import LocationHero from "../components/LocationHero";
-import { COUNTRY_IMAGES } from '../components/ReferenceGroups';
+import { CITY_IMAGES } from '../components/ReferenceGroups';
 
-const CountryPage = ({shows}) => {
-    const {country} = useParams();
+const CityPage = ({shows}) => {
+    const {city} = useParams();
     function safeDecodeURIComponent(str) {
         try {
             return decodeURIComponent(str);
@@ -16,21 +16,21 @@ const CountryPage = ({shows}) => {
         }
     }
 
-const decodedCountry = safeDecodeURIComponent(country);
+const decodedCity = safeDecodeURIComponent(city);
     
     const filtered = shows.filter(
-      (show) => show.Country?.trim() === decodedCountry?.trim() 
+      (show) => show.City?.trim() === decodedCity?.trim() 
     );
     const uniqueShows = [
         ... new Map(filtered.map(show => [show.Title, show])).values()
     ];
 
-    const countryName = decodedCountry;
+    const cityName = decodedCity;
 
   return (
     <>
     <LocationHero
-    type="country" name={countryName} images={COUNTRY_IMAGES} pageTitle={`Shows in ${countryName}`}
+    type="city" name={cityName} images={CITY_IMAGES} pageTitle={`Shows in ${cityName}`}
     />
 
     <div className="category-page">
@@ -72,4 +72,4 @@ const decodedCountry = safeDecodeURIComponent(country);
   )
 }
 
-export default CountryPage
+export default CityPage

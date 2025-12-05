@@ -14,6 +14,7 @@ import CategoryPage from './pages/CategoryPage'
 import CategoryGroupsPage from './pages/CategoryGroupsPage'
 import CityGrid from './components/CityGrid'
 import CountryPage from './pages/CountryPage'
+import CityPage from './pages/CityPage'
 
 
 
@@ -51,9 +52,10 @@ function App() {
 
         <Route path="/category/:category" element={<CategoryPage shows={shows}/>} />
         <Route path="/category-group/:category" element={<CategoryGroupsPage shows={shows}/>} />
-        <Route path="/:country" element={<CountryPage shows={shows}/>}/>
+        <Route path="/country/:country" element={<CountryPage shows={shows}/>}/>
 
-        <Route path="/city/:cityName" element={<CityGrid />} />
+        <Route path="/:cityName" element={<CityGrid />} />
+        <Route path="/city/:city" element={<CityPage shows={shows}/>}/>
 
         {/* footer links */}
         <Route path='/aboutUs' element={<AboutUs/>}/>

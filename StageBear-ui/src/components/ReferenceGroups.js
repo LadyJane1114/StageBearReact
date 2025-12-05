@@ -38,6 +38,5 @@ export const COUNTRY_IMAGES = {
   "Canada":"/countries/country-canada.jpg",
   "United Kingdom":"/countries/country-uk.jpg",
   "United States":"/countries/country-us.jpg"
-  
 }
 // ideally I would update the API for something like this, but given the time left on this assignment and the small amount of locations used, I'm just doing this
