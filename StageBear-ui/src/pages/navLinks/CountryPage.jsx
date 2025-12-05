@@ -3,36 +3,34 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-import HeroEvents from "../components/HeroEvents"
-import {CATEGORY_GROUPS} from '../components/ReferenceGroups'
+import LocationHero from "../../components/LocationHero";
+import { COUNTRY_IMAGES } from '../../components/ReferenceGroups';
 
+const CountryPage = ({shows}) => {
+    const {country} = useParams();
+    function safeDecodeURIComponent(str) {
+        try {
+            return decodeURIComponent(str);
+        } catch {
+            return str;
+        }
+    }
 
-const valueToLabelMap = Object.values(CATEGORY_GROUPS)
-  .flat()
-  .reduce((acc, { value, label }) => {
-    acc[value] = label;
-    return acc;
-  }, {});
-
-const CategoryPage = ({shows}) => {
-    const { category } = useParams();
-    
-    const decodedCategory = decodeURIComponent(category);
+const decodedCountry = safeDecodeURIComponent(country);
     
     const filtered = shows.filter(
-        (show) => show.CategoryTitle === decodedCategory
+      (show) => show.Country?.trim() === decodedCountry?.trim() 
     );
     const uniqueShows = [
-        ...new Map(filtered.map(show => [show.Title, show])).values()
+        ... new Map(filtered.map(show => [show.Title, show])).values()
     ];
 
-    const displayLabel = valueToLabelMap[decodedCategory] || decodedCategory;
+    const countryName = decodedCountry;
 
   return (
     <>
-    <HeroEvents 
-        shows={filtered} 
-        pageTitle={displayLabel}
+    <LocationHero
+    type="country" name={countryName} images={COUNTRY_IMAGES} pageTitle={`Shows in ${countryName}`}
     />
 
     <div className="category-page">
@@ -51,7 +49,11 @@ const CategoryPage = ({shows}) => {
                         />
                         <Card.Body>
                             <Card.Title className="card-title">{show.Title}</Card.Title>
-                            <Card.Text className="card-info">{show.VenueName}</Card.Text>
+                            <Card.Text className="card-info">
+                                {show.CategoryTitle}
+                                <br/>
+                                {show.VenueName} - {show.City}
+                            </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-end">
                         <Link to={`/details/${show.ShowID}`}>
@@ -70,4 +72,4 @@ const CategoryPage = ({shows}) => {
   )
 }
 
-export default CategoryPage
+export default CountryPage
