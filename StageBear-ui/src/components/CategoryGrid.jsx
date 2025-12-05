@@ -13,6 +13,7 @@ const CategoryGrid = ({ title, shows = [] }) => {
   const showsToDisplay = uniqueShows.slice(0, 4);
 
   return (
+    <>
     <div className="category-section">
       <div className='category-header'>
         <h2>{title} </h2>
@@ -46,6 +47,7 @@ const CategoryGrid = ({ title, shows = [] }) => {
         ))}
       </Row>
     </div>
+    </>
   );
 };
 
