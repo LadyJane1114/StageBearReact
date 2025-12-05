@@ -15,7 +15,7 @@ import CategoryGroupsPage from './pages/CategoryGroupsPage'
 import CityGrid from './components/CityGrid'
 import CountryPage from './pages/navLinks/CountryPage'
 import CityPage from './pages/CityPage'
-import SearchResults from './pages/SearchResults'
+import SearchResults from './pages/navLinks/SearchResults'
 
 
 
