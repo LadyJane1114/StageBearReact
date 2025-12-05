@@ -13,6 +13,8 @@ import CantWait from './pages/CantWait'
 import CategoryPage from './pages/CategoryPage'
 import CategoryGroupsPage from './pages/CategoryGroupsPage'
 import CityGrid from './components/CityGrid'
+import CountryPage from './pages/CountryPage'
+
 
 
 
@@ -49,6 +51,7 @@ function App() {
 
         <Route path="/category/:category" element={<CategoryPage shows={shows}/>} />
         <Route path="/category-group/:category" element={<CategoryGroupsPage shows={shows}/>} />
+        <Route path="/:country" element={<CountryPage shows={shows}/>}/>
 
         <Route path="/city/:cityName" element={<CityGrid />} />
 

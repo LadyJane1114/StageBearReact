@@ -50,7 +50,7 @@ const ShakesNav = () => {
 
               <NavDropdown title="Countries" id="dropdown-4">
                 <NavDropdown.Item as={Link} to ="/Canada">Canada</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to ="/United%States">United States</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to ="/United%20States">United States</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to ="/United%20Kingdom">United Kingdom</NavDropdown.Item>
               </NavDropdown>
             </Nav>
