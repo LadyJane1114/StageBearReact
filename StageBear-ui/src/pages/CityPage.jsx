@@ -52,7 +52,7 @@ const decodedCity = safeDecodeURIComponent(city);
                             <Card.Text className="card-info">
                                 {show.VenueName}
                                 <br/>
-                                {show.City}
+                                {show.CategoryTitle}
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-end">

@@ -50,9 +50,9 @@ const decodedCountry = safeDecodeURIComponent(country);
                         <Card.Body>
                             <Card.Title className="card-title">{show.Title}</Card.Title>
                             <Card.Text className="card-info">
-                                {show.VenueName}
+                                {show.CategoryTitle}
                                 <br/>
-                                {show.City}
+                                {show.VenueName} - {show.City}
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-end">
