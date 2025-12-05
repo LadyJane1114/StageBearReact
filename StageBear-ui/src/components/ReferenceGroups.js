@@ -23,3 +23,14 @@ export const CATEGORY_GROUPS = {
   ]
 };
 
+
+
+export const CITY_IMAGES = {
+  "Halifax":"/cities/city-halifax.jpg",
+  "Toronto":"/cities/city-toronto.jpg",
+  "Sydney":"/cities/city-sydney.jpg",
+  "London":"/cities/city-london.jpg",
+  "Los Angeles":"/cities/city-los-angeles.jpg",
+  "New York":"/cities/city-new-york.jpg"
+}
+// ideally I would update the API for something like this, but given the time left on this assignment and the small amount of locations used, I'm just doing this

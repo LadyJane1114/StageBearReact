@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Nav, Navbar, Container, NavDropdown, Form, Button } from "react-bootstrap"
 import ShakesLogo from '../assets/ShakesLogo.png'
-import {CATEGORY_GROUPS} from '../components/CategoryGroups'
+import {CATEGORY_GROUPS} from './ReferenceGroups'
 
 const ShakesNav = () => {
   return (

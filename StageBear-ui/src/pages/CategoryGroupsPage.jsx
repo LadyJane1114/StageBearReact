@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import HeroEvents from "../components/HeroEvents"
-import {CATEGORY_GROUPS} from '../components/CategoryGroups'
+import {CATEGORY_GROUPS} from '../components/ReferenceGroups'
 
 const CategoryGroupsPage = ({shows}) => {
 
@@ -45,12 +45,9 @@ const CategoryGroupsPage = ({shows}) => {
                         <Card.Body>
                         <Card.Title className="card-title">{show.Title}</Card.Title>
                             <Card.Text className="card-info">
-                                <>
                                     {show.CategoryTitle}
-                                </>
-                                <>
+                                    <br/>
                                     {show.VenueName}
-                                </>
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-end">

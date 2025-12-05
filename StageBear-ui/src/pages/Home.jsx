@@ -1,7 +1,11 @@
-import { Link } from 'react-router-dom'
+
+import {CATEGORY_GROUPS} from '../components/ReferenceGroups'
+
 import HeroEvents from '../components/HeroEvents'
 import CategoryGrid from '../components/CategoryGrid'
-import {CATEGORY_GROUPS} from '../components/CategoryGroups'
+import CityGrid from '../components/CityGrid'
+
+
 
 const Home = ({shows}) => {
 
@@ -22,8 +26,10 @@ const Home = ({shows}) => {
             title={groupTitle}
             shows={filteredShows}
           />
+          
         );
       })}
+      <CityGrid shows={shows}/>
     </>
   )
 }

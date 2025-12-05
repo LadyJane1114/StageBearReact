@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 import HeroEvents from "../components/HeroEvents"
-import {CATEGORY_GROUPS} from '../components/CategoryGroups'
+import {CATEGORY_GROUPS} from '../components/ReferenceGroups'
 
 
 const valueToLabelMap = Object.values(CATEGORY_GROUPS)
