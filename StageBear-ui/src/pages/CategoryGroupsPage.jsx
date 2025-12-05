@@ -3,8 +3,8 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-import HeroEvents from "../components/HeroEvents"
 import {CATEGORY_GROUPS} from '../components/ReferenceGroups'
+import CategoryHero from "../components/CategoryHero";
 
 const CategoryGroupsPage = ({shows}) => {
 
@@ -23,7 +23,7 @@ const CategoryGroupsPage = ({shows}) => {
 
   return (
     <>
-    <HeroEvents 
+    <CategoryHero 
         shows={filtered} 
         pageTitle={decodedCategory}
     />
