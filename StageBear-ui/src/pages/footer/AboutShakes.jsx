@@ -2,7 +2,8 @@ import React from 'react'
 
 const AboutShakes = () => {
   return (
-    <div>AboutShakes</div>
+    <>
+    </>
   )
 }
 
