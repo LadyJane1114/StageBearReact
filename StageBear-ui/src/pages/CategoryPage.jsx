@@ -50,8 +50,8 @@ const CategoryPage = ({shows}) => {
                         className="category-card-img"
                         />
                         <Card.Body>
-                        <Card.Title className="card-title">{show.Title}</Card.Title>
-                        <Card.Text className="card-info">{show.VenueName}</Card.Text>
+                            <Card.Title className="card-title">{show.Title}</Card.Title>
+                            <Card.Text className="card-info">{show.VenueName}</Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-end">
                         <Link to={`/details/${show.ShowID}`}>

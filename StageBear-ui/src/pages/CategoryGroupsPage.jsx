@@ -44,13 +44,13 @@ const CategoryGroupsPage = ({shows}) => {
                         />
                         <Card.Body>
                         <Card.Title className="card-title">{show.Title}</Card.Title>
-                        <Card.Text className="card-info">
-                            <div>
-                                {show.CategoryTitle}
-                            </div>
-                            <div>
-                                {show.VenueName}
-                            </div>
+                            <Card.Text className="card-info">
+                                <>
+                                    {show.CategoryTitle}
+                                </>
+                                <>
+                                    {show.VenueName}
+                                </>
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-end">
