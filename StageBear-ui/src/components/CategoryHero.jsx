@@ -3,7 +3,7 @@ const CategoryHero = ({ shows = [], pageTitle = "Get the best seats to all your 
   const upcomingShows = shows
     .sort((a,b) => new Date(a.Scheduled) - new Date(b.Scheduled))
     .filter((show,index,arr) => arr.findIndex(s=> s.Title === show.Title)=== index)
-    .slice(0,5)
+    .slice(0,4)
 
   
   return (
